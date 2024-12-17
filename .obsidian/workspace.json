@@ -1,0 +1,190 @@
+{
+  "main": {
+    "id": "f25a9948edc43ac6",
+    "type": "split",
+    "children": [
+      {
+        "id": "633e744378b08cea",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "fe5a86ef29aa9bd6",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "4d5de2fdb1fdd5f6",
+    "type": "split",
+    "children": [
+      {
+        "id": "f2d39bc07cb11ae8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "959fb3194e5a1900",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "2e415f95b0b0a914",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "tercer",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "e3252377c0e9e16a",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 290.5
+  },
+  "right": {
+    "id": "bd5ddd98c020bd0e",
+    "type": "split",
+    "children": [
+      {
+        "id": "e26334ca40dedf6d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ef2aeedd0f118605",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "BASES_DATOS_LARAVEL.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for BASES_DATOS_LARAVEL"
+            }
+          },
+          {
+            "id": "c89dd063746bceea",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "BASES_DATOS_LARAVEL.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from BASES_DATOS_LARAVEL"
+            }
+          },
+          {
+            "id": "1dea61661666a788",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "60aafc9a41b85d7c",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "BASES_DATOS_LARAVEL.md"
+              },
+              "icon": "lucide-list",
+              "title": "Outline of BASES_DATOS_LARAVEL"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "fe5a86ef29aa9bd6",
+  "lastOpenFiles": [
+    "DIRECTIVAS_VISTAS_LARAVEL.md",
+    "ETIQUETAS_ESPECIALES_LARAVEL.md",
+    "VISTAS_FORMULARIOS_LARAVEL.md",
+    "RUTAS_LARAVEL.md",
+    "MIDDLEWARE_LARAVEL.md",
+    "MIGRACIONES_LARAVEL.md",
+    "CONTROLADORES_LARAVEL.md",
+    "CREACION_PROYECTO_LARAVEL.md",
+    "BUENAS_PRACTICAS_PHP.md",
+    "AUTENTICACION_LARAVEL.md",
+    "EXTENSIONES_LARAVEL.md",
+    "EXPRESIONES_REGULARES_LARAVEL.md",
+    "REDIRECCIONES_LARAVEL.md",
+    "Untitled.md",
+    "VALIDACION_DATOS_LARAVEL.md",
+    "MIGRACIONES_SEEDERS_LARAVEL.md",
+    "MODELOS_LARAVEL.md",
+    "INSTALACION_LARAVEL.md",
+    "INTRODUCCION_LARAVEL.md",
+    "ELOQUENT_ORM.md",
+    "ESTRUCTURA_PROYECTO_LARAVEL.md",
+    "Pasted image 20241212203249.png",
+    "Pasted image 20241212202835.png",
+    "Pasted image 20241212202808.png",
+    "Pasted image 20241212200857.png",
+    "Pasted image 20241212195752.png"
+  ]
+}
