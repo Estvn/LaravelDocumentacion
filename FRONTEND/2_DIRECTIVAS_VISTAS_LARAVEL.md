@@ -1,10 +1,11 @@
 
 # Directivas en Laravel
 
-### @extends
+### @extends e @include
 
-- **@extends('carpeta.archivo')** sirve para crear islas y reducir código. 
-
+- **@extends('carpeta.archivo')** establece una relación padre-hijo sobre la vista donde se va a incluir y mejora el rendimiento al trabajar con @sections y @yield.
+- **@include('carpeta.archivo')** solo copia y pega el contenido de una vista en otra, es decir, reutiliza fragmentos de otras vistas e inserta el contenido sin ninguna optimización.
+- **@extends** se usa para fragmentos de código que son dinámicos, porque mejora la optimización del uso de algunas directivas.
 ## **@section @parent y @yield** 
 ### @yield
 
@@ -103,5 +104,39 @@
 </section>
 ```
 
+- Las variables que refieren a slots dentro de un componente son conocidas como **propiedades del componente**.
 
+> [!NOTA]
+> En el archivo de etiquetas especiales puede ver la forma en la que se usan los componentes en Laravel 11.
+# Inyectar y Evitar la Inyección de Código en Vistas
 
+### Evitar inyección de código desde escapes de PHP
+
+- Con las etiquetas de escape para inyectar código PHP **"\<?= ?>"** se puede realizar inyección de código malintencionado.
+
+```
+<?= "<script>alert('Mensaje inyectado!')</script>" ?>
+```
+
+- Usando la función **e()** de PHP  se evita la inyección de código por medio de estos escapes
+
+```
+<?= e("<script>alert('Mensaje no inyectado')</script>") ?>
+```
+
+### Inyectar inyección de código desde escapes Blade
+
+- Los dobles corchetes de Blade "{{$var}}"  internamente se parsean como un escape de PHP dentro de una función e(), por lo tanto, estos evitan la inyección de código malicioso.
+
+```
+{{"<script>alert('Esta alerta no se ejecutará!')</script>"}}
+```
+
+- Puede existir el caso donde sea necesario inyectar código en el programa, por lo tanto, esta es la sintaxis para permitirlo
+
+```
+{{!! "<script>alert('Esta alerta SI se ejecutará!')</script>" !!}}
+```
+
+> [!NOTA]
+> Los códigos maliciosos que no logran ejecutarse, simplemente se imprimirán en pantalla.

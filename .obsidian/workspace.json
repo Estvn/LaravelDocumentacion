@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "633e744378b08cea",
+        "id": "fe61e53f7d246906",
         "type": "tabs",
         "children": [
           {
-            "id": "fe5a86ef29aa9bd6",
+            "id": "46919cc0a6396e5e",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "BACKEND/1_RUTAS_LARAVEL.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "1_RUTAS_LARAVEL"
             }
           }
         ]
@@ -36,7 +40,8 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
+                "sortOrder": "alphabetical",
+                "autoReveal": false
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -48,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tercer",
+                "query": "validacion_da",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -73,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 290.5
+    "width": 328.50418853759766
   },
   "right": {
     "id": "bd5ddd98c020bd0e",
@@ -150,6 +155,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "bases:Create new base": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -158,33 +164,42 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "fe5a86ef29aa9bd6",
+  "active": "46919cc0a6396e5e",
   "lastOpenFiles": [
-    "DIRECTIVAS_VISTAS_LARAVEL.md",
-    "ETIQUETAS_ESPECIALES_LARAVEL.md",
-    "VISTAS_FORMULARIOS_LARAVEL.md",
-    "RUTAS_LARAVEL.md",
-    "MIDDLEWARE_LARAVEL.md",
-    "MIGRACIONES_LARAVEL.md",
-    "CONTROLADORES_LARAVEL.md",
-    "CREACION_PROYECTO_LARAVEL.md",
-    "BUENAS_PRACTICAS_PHP.md",
-    "AUTENTICACION_LARAVEL.md",
-    "EXTENSIONES_LARAVEL.md",
-    "EXPRESIONES_REGULARES_LARAVEL.md",
-    "REDIRECCIONES_LARAVEL.md",
-    "Untitled.md",
-    "VALIDACION_DATOS_LARAVEL.md",
-    "MIGRACIONES_SEEDERS_LARAVEL.md",
-    "MODELOS_LARAVEL.md",
-    "INSTALACION_LARAVEL.md",
+    "BACKEND/6_MIGRACIONES_SEEDERS_LARAVEL.md",
+    "BACKEND/11_PROTEGER_RUTAS_LARAVEL.md",
+    "BACKEND/8_FORM_REQUEST_LARAVEL.md",
+    "BACKEND/7_MIDDLEWARE_LARAVEL.md",
+    "BACKEND/9_VALIDACION_DATOS_LARAVEL.md",
+    "BACKEND/10_AUTENTICACION_LARAVEL.md",
+    "BACKEND/12_REDIRECCIONES_LARAVEL.md",
+    "BACKEND/13_ELIMINAR_REGISTRO_LARAVEL.md",
+    "BACKEND/14_EXPRESIONES_REGULARES_LARAVEL.md",
+    "BACKEND/15_MENSAJE_SESION_LARAVEL.md",
     "INTRODUCCION_LARAVEL.md",
-    "ELOQUENT_ORM.md",
-    "ESTRUCTURA_PROYECTO_LARAVEL.md",
-    "Pasted image 20241212203249.png",
-    "Pasted image 20241212202835.png",
-    "Pasted image 20241212202808.png",
+    "HERRAMIENTAS_INSTALACION/6_EXTENSIONES_LARAVEL.md",
+    "HERRAMIENTAS_INSTALACION/5_TINKER_LARAVEL.md",
+    "HERRAMIENTAS_INSTALACION/4_BUENAS_PRACTICAS_PHP.md",
+    "HERRAMIENTAS_INSTALACION/3_ESTRUCTURA_PROYECTO_LARAVEL.md",
+    "HERRAMIENTAS_INSTALACION/2_CREACION_PROYECTO_LARAVEL.md",
+    "HERRAMIENTAS_INSTALACION/1_INSTALACION_LARAVEL.md",
+    "FRONTEND/5_MULTILENGUAJE_LARAVEL.md",
+    "FRONTEND/4_ETIQUETAS_ESPECIALES_LARAVEL.md",
+    "FRONTEND/3_AGREGAR_JS_CSS_LARAVEL.md",
+    "FRONTEND/2_DIRECTIVAS_VISTAS_LARAVEL.md",
+    "FRONTEND/1_VISTAS_FORMULARIOS_LARAVEL.md",
+    "BACKEND/1_RUTAS_LARAVEL.md",
+    "Pasted image 20241223162540.png",
+    "BACKEND/5_MIGRACIONES_LARAVEL.md",
+    "BACKEND/3_MODELOS_LARAVEL.md",
+    "BACKEND/4_ELOQUENT_ORM.md",
+    "HERRAMIENTAS_INSTALACION",
+    "FRONTEND",
+    "BACKEND",
+    "Pasted image 20241212195752.png",
     "Pasted image 20241212200857.png",
-    "Pasted image 20241212195752.png"
+    "Pasted image 20241212202808.png",
+    "Pasted image 20241212202835.png",
+    "Pasted image 20241212203249.png"
   ]
 }

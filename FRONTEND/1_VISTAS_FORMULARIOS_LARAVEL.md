@@ -8,7 +8,7 @@
 - Permiten separar la lógica de presentación del resto de la aplicación, facilitando la creación de las interfaces de usuario dinámicas y reutilizables.
 
 - Las plantillas Blade son archivos que contienen HTML y la presentación de la aplicación.
-- Pueden contener variables que se asignan en los controladores y se muestran en las vistas.
+- Pueden contener variables que se asignan en los contr00oladores y se muestran en las vistas.
 - Estas plantillas se almacenan en el directorio: **resources/views**
 
 - Blade es el "apellido" del archivo, no su extensión. Es un motor de plantillas integrado en Laravel.
@@ -155,6 +155,20 @@ Route::put('/productos/actualizar/{id}', [ProductosController::class, 'productos
 - En el ejemplo anterior, desde la vista se envío un formulario y un identificador.
 - Como puede ver, para el envío del formulario no es necesario definir un parámetro.
 - Para enviar un dato, de define el valor después del nombre de la ruta, y en el archivo web.php se define una variable en la ruta, que luego es recibida en los parámetros del método en el controlador
+
+## **Editar Formularios**
+
+- Cuando va a editar un registro de la base de datos, en Laravel tiene que enviar la información del registro a editar por la ruta que dirige a la vista con el formulario para realizar la edición.
+- No puede simplemente enviar la información de una vista a otra.
+- En los valores predeterminados del formulario, en el método **old()** puede poner dos valores
+
+```
+<input type="text" name="titulo" value="{{old('titulo', $post->title)}}"/>
+```
+
+- El primer parámetro sería el valor anterior, en caso de que ocurra una redirección a causa de un error durante el envío del formulario.
+- El segundo parámetro es uno de los valores que se envía a la vista.
+
 ## Verbos HTTP
 
 > [!NOTA]

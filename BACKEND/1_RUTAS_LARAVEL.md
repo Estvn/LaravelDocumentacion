@@ -2,6 +2,32 @@
 # Routing en Laravel
 -------------
 
+> [!DANGER] ¡EL ORDEN DE LAS RUTAS IMPORTA!
+> - Si tiene dos rutas get con la misma cantidad de parámetros, es posible que Laravel confunda las rutas y lance un errror.
+> - Tiene que ordenar las rutas, **agregue de último las rutas con los parámetro variables.**  
+
+#### Tipo de solicitudes soportadas en Laravel
+
+```
+Route::get(); // Obtiene recursos
+
+Route::post(); // Crea recursos
+
+Route::patch(); // Actualiza solo los datos necesarios de un recurso
+
+Route::put(); // Crea un recurso, y si ya existe lo reemplaza.
+
+Route::delete(); // Elimina un recurso.
+
+Route::options(); // Verifica las solicitudes permitidas para un recurso.
+
+Route::match(['put', 'patch'], '/', function(){}); // Junta varias posibles solicitudes para un recurso.
+
+Route::any(); // Responde a cualquier solicitud
+```
+
+- **El uso directo del método view en la ruta responde a las solicitudes get y head**
+
 ```
 Route::view('/', 'welcome', ["nombre" => 'Estiven']);
 ```
@@ -195,7 +221,9 @@ Route::put('/productos/actualizar/{id}', [ProductosController::class, 'productos
 **DELETE**
 
 ```
+
 Route::delete('/productos/{id}', [ProductoController::class, 'destroy'])->middleware('auth');
+
 ```
 
 ## **Redireccionamiento en las rutas
@@ -205,10 +233,12 @@ Route::delete('/productos/{id}', [ProductoController::class, 'destroy'])->middle
 - Se define la ruta origen y destino.
 
 ```
+
 Route::redirect('/origen', '/destino', 301);
 Route::get('/destino', function(){
     return "Estoy en la ruta destino";
 });
+
 ```
 
 #### Método redirect()->route('nombreRuta')
@@ -224,6 +254,90 @@ Route::get('/destino', function(){
     return "Estoy en la ruta destino";
 })->name('nombre.destino');
 ```
+
+#### Método to_route('nombreRuta)
+
+- Hace lo mismo que redirect()->route() pero con menos caracteres.
+
+```
+return to_route->('nombreRuta');
+```
+
+# Alternativa a la definición de las rutas
+-------------
+
+- Ya vimos que una forma de reducir el código en las rutas es agrupándolas.
+- Pero existe una alternativa que reduce considerablemente el código en las rutas.
+
+- Si quiere usar esta alternativa, las rutas deben seguir un patrón similar, deben tener el mismo patrón en los nombres y los parámetros.
+
+#### Recomendaciones
+
+**Primero defina las rutas a mano para saber como será su estructura:**
+
+```
+Route::prefix('blog')->group(function(){
+
+    Route::get('/', [PostController::class, 'index'])->name('blog');
+
+    Route::get('/create', [PostController::class, 'create'])->name('post.create');
+
+    Route::get('/{id}', [PostController::class, 'mostrar'])->name('get.onepost');
+
+    Route::post('/store', [PostController::class, 'store'])->name('post.guardar');
+
+    Route::get('/edit/{id}', [PostController::class, 'edit'])->name('post.edit');
+
+    Route::patch('/update/{id}', [PostController::class, 'update'])->name('post.update');  
+
+    Route::delete('/delete/{id}', [PostController::class, 'delete'])->name('post.delete');
+
+});
+```
+
+- En este ejemplo las rutas no tienen el mismo patrón, pero sirve para retroalimentar la explicación anterior.
+
+**Una vez escritas las rutas, ejecute este comando:**
+
+```
+php artisan route:list --path=blog
+```
+
+**Ahora, reduzca el código de las rutas utilizando este código:**
+
+```
+Route::resource('blog', PostController::class, [
+    'names' => 'posts',
+    'parameters' => [
+        'blog' => 'post',
+    ],
+]);
+```
+
+- Ejecute nuevamente el comando para ver los grupos de rutas, si después la reducción de código en las rutas, los grupos mostrados en la consola no tienen cambios, la reducción no dará problemas 
+
+## **Dejar el Hover en Rutas**
+
+```
+<nav>
+    <ul>
+
+        <li><a class="{{request()->routeIs('inicio') ? 'text-green-400' : 'text-gray-600'}}" href="{{ route('inicio') }}">Inicio</a></li>
+
+        <li><a class="{{request()->routeIs('contact') ? 'text-green-400' : 'text-gray-600'}}" href="{{ route('contact') }}">Contacto</a></li>
+
+        <li><a class="{{request()->routeIs('post.*') ? 'text-green-400' : 'text-gray-600'}}" href="{{ route('post.blog') }}">Blog</a></li>
+
+        <li><a class="{{request()->routeIs('sobre') ? 'text-green-400' : 'text-gray-600'}}" href="{{ route('sobre') }}">Sobre</a></li>
+
+    </ul>    
+</nav>
+```
+
+
+
+
+
 
 
 
